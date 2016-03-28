@@ -23,6 +23,7 @@
                     <td>
                         {{$veiculo->ano}}
                     </td>
+                    
                     <td>
                         {{$veiculo->getModeloName()}}
                     </td>
