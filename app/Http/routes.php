@@ -12,11 +12,9 @@
 */
 
 Route::get('/', 'VeiculoController@index');
-Route::get('alocar', function () {
-    return view('alocar');
-});
+Route::get('/alocar/{id}','VeiculoController@alocar');
 
-Route::get('caracteristica', function () {
+Route::get('/caracteristica', function () {
     return view('caracteristica');
 });
 

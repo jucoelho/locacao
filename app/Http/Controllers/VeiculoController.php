@@ -18,10 +18,10 @@ class VeiculoController extends Controller
      */
     public function index()
     {
-        $veiculos= Veiculo::all();
+        $veiculos= Veiculo::paginate(10);
         //dd($veiculos);
-        //return view('veiculos', compact('veiculos'));
-        return response()->json($veiculos);
+        return view('veiculos', compact('veiculos'));
+     //   return response()->json($veiculos);
     }
 
     /**
@@ -53,7 +53,8 @@ class VeiculoController extends Controller
      */
     public function show($id)
     {
-        $veiculos= Veiculo::find($id);
+        $veiculo= Veiculo::find($id);
+        //return view('caracteristica', compact('veiculo'));
         return response()->json($veiculos);
     }
 
@@ -89,5 +90,11 @@ class VeiculoController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function alocar($id)
+    {
+        $data = array('responsta' =>'Alocado');
+        return response()->json($data);
     }
 }

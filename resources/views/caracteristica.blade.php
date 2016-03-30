@@ -19,13 +19,13 @@
             
                 <tr>
                     <td>
-                        Bmw
+                        {{$veiculo->marca}}
                     </td>
                     <td>
-                       X5
+                       {{$veiculo->getModeloName()}}
                     </td>
                     <td>
-                       2012
+                       {{$veiculo->ano}}
                     </td>
                     <td>
                         120.000
